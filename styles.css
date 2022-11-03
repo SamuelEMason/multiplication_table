@@ -39,8 +39,8 @@ main {
 #multi-container {
 	overflow-y: scroll;
 	scroll-snap-type: both;
-	scroll-padding-left: 37px;
-	scroll-padding-top: 39px;
+	scroll-padding-left: 30px;
+	scroll-padding-top: 30px;
 	background-color: rgba(172, 181, 178, 0);
 	border-radius: 10px;
 	width: calc(100vw - 50px);
