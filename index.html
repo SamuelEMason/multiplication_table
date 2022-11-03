@@ -1,0 +1,56 @@
+<!-- 
+	COMP 4610 GUI I
+	HW3: Creating an Interactive Dynamic Table 
+	Samuel Mason
+	Samuel_Mason@student.uml.edu
+	10/24/2022
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>
+			Dynamic Multiplication Table
+		</h1>
+	</header>
+	<main>
+			<div class="container">
+				<form action="/" method="post">
+					<table id="form-table">
+						<tr>
+							<th><label for="xmin">x min</label></th>
+							<th><label for="xmax">x max</label></th>
+							<th><label for="ymin">y min</label></th>
+							<th><label for="ymax">y max</label></th>
+						</tr>
+						<tr>
+							<td><input id="xmin" name="xmin" type="number" min="-50" max="50"></td>
+							<td><input id="xmax" name="xmax" type="number" min="-50" max="50"></td>
+							<td><input id="ymin" name="ymin" type="number" min="-50" max="50"></td>
+							<td><input id="ymax" name="ymax" type="number" min="-50" max="50"></td>
+						</tr>
+						<tfoot id="error-messages"></tfoot>
+					</table>
+				</form>
+			</div>
+			<div id="multi-container" class="">
+				<table id="multitable"></table>
+			</div>
+			<div class="container">
+				<button id="submit" type="submit" onclick="validateInput()">submit</button>
+			</div>
+			<script src="apps.js"></script>
+	</main>
+</body>
+</html>

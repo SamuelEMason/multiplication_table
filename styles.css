@@ -1,0 +1,144 @@
+/* 
+	COMP 4610 GUI I
+	HW3: Creating an Interactive Dynamic Table 
+	Samuel Mason
+	Samuel_Mason@student.uml.edu
+	10/24/2022
+*/
+
+body {
+	background-color: antiquewhite;
+	background-image: url('images/fog.jpg');
+	font-family: 'Cairo', sans-serif;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+	padding: 10px;
+}
+
+header {
+	font-size: large;
+	letter-spacing: 0.3em;
+	color: aliceblue;
+	text-shadow: 3px 3px 3px rgb(49, 21, 21);
+	box-shadow: inset 100px 10px 100px rgba(128, 128, 128, 0.192);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#multi-container {
+	overflow-y: scroll;
+	scroll-snap-type: both;
+	scroll-padding-left: 30px;
+	scroll-padding-top: 42px;
+	background-color: rgba(172, 181, 178, 0);
+	border-radius: 10px;
+	width: calc(100vw - 50px);
+	height: calc(100vw - 50px);
+	max-height: 349px;
+	max-width: 690px;
+	height: fit-content;
+	width: fit-content;
+}
+
+#multi-container table tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even) {
+	background-color: rgba(165, 154, 139, 0.271);
+}
+
+#multi-container::-webkit-scrollbar {
+	width: 1em;
+}
+
+#multi-container::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.351);
+  }
+
+#multi-container::-webkit-scrollbar-thumb {
+	background-color: rgba(102, 102, 102, 0.108);
+	outline: 1px solid rgba(30, 16, 16, 0.334);
+  }
+
+#multi-container::-webkit-scrollbar-corner {
+	background-color: rgba(102, 102, 102, 0.132);
+}
+
+
+#multitable {
+	border-spacing: 0;
+	border-radius: 50%;
+	text-align: center;
+
+}
+
+#multitable th {
+	position: sticky;
+	/* box-shadow: inset 0 0 6px rgba(111, 107, 107, 0.153); */
+	top: 0;
+	background-color: rgb(236, 236, 236);
+	padding: 10px;
+	border: 1px solid #bbbbbb72;
+	padding: 5px;
+	width: 80px;
+}
+
+#multitable td {
+	border: 1px solid #bbbbbb;
+	padding: 5px;
+	width: 80px;
+	min-width: 80px;
+	scroll-snap-align: start;
+}
+
+p {
+	margin: 10px;
+}
+
+.container {
+	background-color: #bbbbbb00;
+	width: fit-content;
+}
+
+#form-table {
+	margin: 0 auto;
+}
+
+#form-table th>label, td>input {
+	width: 150px;
+}
+
+.fixed-left {
+	left: 0;
+}
+
+.messages {
+	text-align: center;
+	font-size: small;
+	background-color: rgb(170, 65, 65);
+	border-radius: 45px;
+	height: 100px;
+}
+
+
+
+
+.error-message {
+
+	list-style: none;
+	font-style: oblique;
+	color: rgba(0, 0, 0, 0.996);
+	background-color: #ff59002d;
+	text-align: center;
+	box-shadow: 25px 25px 50px rgba(255, 221, 0, 0.278);
+
+}
+
